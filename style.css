@@ -1,0 +1,18 @@
+html{
+    box-sizing: border-box;
+}
+
+*, ::after, ::before{
+    box-sizing: inherit;
+}
+
+body{
+
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
