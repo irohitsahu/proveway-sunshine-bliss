@@ -1,21 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sunshine Bliss</title>
-</head>
-<body>
-
-    <section class="product-pricing-wrapper">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="inter-regular">
+    <main class="container">
+      <section class="product-options" aria-labelledby="pricing-title">
         <header>
-            <h1>YAY! It's BOGO</h1>
+          <h1 id="pricing-title" class="title">YAY! It's BOGO</h1>
         </header>
-            <form class="product-pricing-list">
 
-            </form>
-    </section>
-    
-</body>
+        <form class="pricing-form" action="/cart" method="post">
+          <fieldset class="options-list">
+            <legend class="sr-only">Select your package</legend>
+
+            <label
+              class="option-item"
+              role="radiogroup"
+              aria-labelledby="single-unit-label"
+              data-option-index="1"
+            >
+              <div class="item-first-row">
+                <div class="option-content">
+                  <input
+                    type="radio"
+                    name="package"
+                    id="single-unit"
+                    aria-describedby="single-unit-price"
+                    checked
+                  />
+                  <div>
+                    <div>
+                      <span id="single-unit-label" class="unit-label"
+                        >1 Unit</span
+                      >
+                      <span class="discount-badge">10% Off</span>
+                    </div>
+                    <span class="price-type">Standard Price</span>
+                  </div>
+                </div>
+                <div id="single-unit-price" class="price">
+                  <span class="current-price">$10.00 USD</span>
+                  <span class="original-price">$24.00 USD</span>
+                </div>
+              </div>
+              <div class="product-variants visible">
+                <div
+                  class="variant-group"
+                  role="group"
+                  aria-labelledby="first-item"
+                >
+                  <span id="first-item" class="first-item">#1</span>
+                  <label for="size-1" class="sr-only"
+                    >Select size for first item</label
+                  >
+                  <select id="size-1" name="size-1" required aria-label="Size">
+                    <option value="S">S</option>
+                  </select>
+
+                  <label for="color-1" class="sr-only"
+                    >Select color for first item</label
+                  >
+                  <select
+                    id="color-1"
+                    name="color-1"
+                    required
+                    aria-label="Color"
+                  >
+                    <option value="Black">Black</option>
+                  </select>
+                </div>
+
+                <div
+                  class="variant-group"
+                  role="group"
+                  aria-labelledby="second-item"
+                >
+                  <span id="second-item" class="item-number">#2</span>
+                  <label for="size-2" class="sr-only"
+                    >Select size for second item</label
+                  >
+                  <select id="size-2" name="size-2" required aria-label="Size">
+                    <option value="S">S</option>
+                  </select>
+
+                  <label for="color-2" class="sr-only"
+                    >Select color for second item</label
+                  >
+                  <select
+                    id="color-2"
+                    name="color-2"
+                    required
+                    aria-label="Color"
+                  >
+                    <option value="">Select Color</option>
+                  </select>
+                </div>
+              </div>
+            </label>
+
+            <label
+              class="option-item"
+              role="radiogroup"
+              aria-labelledby="two-unit-label"
+              data-option-index="2"
+            >
+              <div class="item-first-row">
+                <div class="option-content">
+                  <input
+                    type="radio"
+                    name="package"
+                    id="two-unit"
+                    aria-describedby="two-unit-price"
+                  />
+                  <div>
+                    <div>
+                      <span id="two-unit-label" class="unit-label">2 Unit</span>
+                      <span class="discount-badge">20% Off</span>
+                    </div>
+                    <span class="price-type">Standard Price</span>
+                  </div>
+                </div>
+                <div id="two-unit-price" class="price">
+                  <span class="current-price">$18.00 USD</span>
+                  <span class="original-price">$24.00 USD</span>
+                </div>
+              </div>
+              <div class="product-variants hidden">
+                <div
+                  class="variant-group"
+                  role="group"
+                  aria-labelledby="first-item"
+                >
+                  <span id="first-item" class="first-item">#1</span>
+                  <label for="size-1" class="sr-only"
+                    >Select size for first item</label
+                  >
+                  <select id="size-1" name="size-1" required aria-label="Size">
+                    <option value="S">S</option>
+                  </select>
+
+                  <label for="color-1" class="sr-only"
+                    >Select color for first item</label
+                  >
+                  <select
+                    id="color-1"
+                    name="color-1"
+                    required
+                    aria-label="Color"
+                  >
+                    <option value="Black">Black</option>
+                  </select>
+                </div>
+
+                <div
+                  class="variant-group"
+                  role="group"
+                  aria-labelledby="second-item"
+                >
+                  <span id="second-item" class="item-number">#2</span>
+                  <label for="size-2" class="sr-only"
+                    >Select size for second item</label
+                  >
+                  <select id="size-2" name="size-2" required aria-label="Size">
+                    <option value="S">S</option>
+                  </select>
+
+                  <label for="color-2" class="sr-only"
+                    >Select color for second item</label
+                  >
+                  <select
+                    id="color-2"
+                    name="color-2"
+                    required
+                    aria-label="Color"
+                  >
+                    <option value="">Select Color</option>
+                  </select>
+                </div>
+              </div>
+
+              <img
+                class="most-popular-banner"
+                src="/public/svg/most-popular.svg"
+                alt="popular package"
+              />
+            </label>
+
+            <label
+              class="option-item"
+              role="radiogroup"
+              aria-labelledby="three-unit-label"
+              data-option-index="3"
+            >
+              <div class="item-first-row">
+                <div class="option-content">
+                  <input
+                    type="radio"
+                    name="package"
+                    id="three-unit"
+                    aria-describedby="three-unit-price"
+                  />
+                  <div>
+                    <div>
+                      <span id="three-unit-label" class="unit-label"
+                        >3 Unit</span
+                      >
+                      <span class="discount-badge">30% Off</span>
+                    </div>
+                    <span class="price-type">Standard Price</span>
+                  </div>
+                </div>
+                <div id="three-unit-price" class="price">
+                  <span class="current-price">$24.00 USD</span>
+                  <span class="original-price">$24.00 USD</span>
+                </div>
+              </div>
+              <div class="product-variants hidden">
+                <div
+                  class="variant-group"
+                  role="group"
+                  aria-labelledby="first-item"
+                >
+                  <span id="first-item" class="first-item">#1</span>
+                  <label for="size-1" class="sr-only"
+                    >Select size for first item</label
+                  >
+                  <select id="size-1" name="size-1" required aria-label="Size">
+                    <option value="S">S</option>
+                  </select>
+
+                  <label for="color-1" class="sr-only"
+                    >Select color for first item</label
+                  >
+                  <select
+                    id="color-1"
+                    name="color-1"
+                    required
+                    aria-label="Color"
+                  >
+                    <option value="Black">Black</option>
+                  </select>
+                </div>
+
+                <div
+                  class="variant-group"
+                  role="group"
+                  aria-labelledby="second-item"
+                >
+                  <span id="second-item" class="item-number">#2</span>
+                  <label for="size-2" class="sr-only"
+                    >Select size for second item</label
+                  >
+                  <select id="size-2" name="size-2" required aria-label="Size">
+                    <option value="S">S</option>
+                  </select>
+
+                  <label for="color-2" class="sr-only"
+                    >Select color for second item</label
+                  >
+                  <select
+                    id="color-2"
+                    name="color-2"
+                    required
+                    aria-label="Color"
+                  >
+                    <option value="">Select Color</option>
+                  </select>
+                </div>
+              </div>
+            </label>
+          </fieldset>
+
+          <div class="order-summary" aria-live="polite">
+            <p class="delivery-info">Free Delivery</p>
+            <p>
+              <span>Total: </span>
+              <span>$18.00 USD</span>
+            </p>
+          </div>
+
+          <button
+            type="submit"
+            class="add-to-cart-button"
+            aria-label="Add to Cart"
+          >
+            <img src="public/svg/plus.svg" alt="plus icon" />
+
+            <span>Add to Cart</span>
+          </button>
+          <p class="brand-support">@ Powered by Pumper</p>
+        </form>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
